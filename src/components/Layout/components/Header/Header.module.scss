@@ -15,13 +15,17 @@
 }
 
 .logo {
-    transform: translateY(12%);
+    transform: translateY(8%);
+}
+
+.search,
+.search-result {
+    width: 361px;
 }
 
 .search {
     position: relative;
     background-color: #2f2f2f;
-    width: 361px;
     height: var(--search-height);
     border-radius: 92px;
     display: flex;
@@ -84,4 +88,16 @@
     &:active {
         background: rgba(255, 255, 255, 0.08);
     }
+}
+
+.search-title {
+    padding: 5px 12px;
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.action {
+    display: flex;
+    align-items: center;
 }

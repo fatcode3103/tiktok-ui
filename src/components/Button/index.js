@@ -16,6 +16,7 @@ function Button({
     children,
     leftIcon,
     rightIcon,
+    menuIcon,
     onClick,
     ...passPprops
 }) {
@@ -50,8 +51,8 @@ function Button({
         rounded: rounded,
     });
     return (
-        <Comp className={classes} {...passPprops}>
-            {leftIcon && <span className={cx('icon-left')}>{leftIcon}</span>}
+        <Comp className={classes} {...props} {...passPprops}>
+            {leftIcon && <span className={cx('icon-left', menuIcon)}>{leftIcon}</span>}
             <span>{children}</span>
             {rightIcon && <span className={cx('icon-right')}>{rightIcon}</span>}
         </Comp>

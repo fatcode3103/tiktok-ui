@@ -35,6 +35,21 @@ function Header() {
         {
             icon: <FontAwesomeIcon icon={faEarthAmericas} />,
             title: 'English',
+            subItem: {
+                title: 'Language',
+                data: [
+                    {
+                        type: 'language',
+                        code: 'en',
+                        title: 'English',
+                    },
+                    {
+                        type: 'language',
+                        code: 'vi',
+                        title: 'Tiếng Việt',
+                    },
+                ],
+            },
         },
         {
             icon: <FontAwesomeIcon icon={faCircleQuestion} />,
@@ -46,6 +61,10 @@ function Header() {
             title: 'Keybroard shortcuts',
         },
     ];
+
+    const handleMenuChange = (menuItem) => {
+        console.log(menuItem);
+    };
 
     return (
         <header className={cx('wrapper')}>
@@ -84,7 +103,7 @@ function Header() {
                         Upload
                     </Button>
                     <Button primary>Log in</Button>
-                    <Menu items={MENU_ITEM}>
+                    <Menu items={MENU_ITEM} onChange={handleMenuChange}>
                         <button className={cx('more-btn')}>
                             <FontAwesomeIcon icon={faEllipsisVertical} />
                         </button>
